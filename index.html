@@ -14,28 +14,32 @@
             --border: #eee;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             background: var(--light); 
             margin: 0; 
-            padding: 20px; 
+            padding: 10px; 
             color: var(--text); 
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .proposal-card { 
             max-width: 800px; 
-            margin: 20px auto; 
+            margin: 10px auto; 
             background: white; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            border-radius: 8px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+            border-radius: 12px; 
             overflow: hidden; 
-            border-top: 10px solid var(--navy); 
+            border-top: 8px solid var(--navy); 
         }
 
         .header { 
             background: white; 
-            padding: 30px; 
+            padding: 20px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -45,168 +49,205 @@
         .logo-text { 
             color: var(--navy); 
             font-weight: bold; 
-            font-size: 28px; 
-            border-left: 5px solid var(--blue); 
-            padding-left: 15px; 
+            font-size: 24px; 
+            border-left: 4px solid var(--blue); 
+            padding-left: 12px; 
             letter-spacing: -1px;
+            line-height: 1;
         }
 
         .header-info {
             text-align: right; 
-            font-size: 12px; 
+            font-size: 11px; 
             color: #666;
         }
 
         .content { 
-            padding: 40px; 
+            padding: 25px 20px; 
         }
 
         h1 { 
             color: var(--navy); 
-            font-size: 22px; 
+            font-size: 18px; 
             text-transform: uppercase; 
-            letter-spacing: 1px; 
-            margin-bottom: 25px; 
+            letter-spacing: 0.5px; 
+            margin-bottom: 20px; 
             margin-top: 0;
+            line-height: 1.3;
         }
 
         .client-info {
-            margin-bottom: 30px;
-            font-size: 16px;
+            margin-bottom: 25px;
+            font-size: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light);
         }
 
         h2 { 
             color: var(--blue); 
-            font-size: 18px; 
+            font-size: 16px; 
             border-bottom: 2px solid var(--light); 
-            padding-bottom: 8px; 
+            padding-bottom: 6px; 
             margin-top: 25px; 
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .item { 
             background: var(--gray-light); 
-            padding: 20px; 
-            border-radius: 6px; 
+            padding: 15px; 
+            border-radius: 8px; 
             border-left: 4px solid var(--blue); 
-            margin-bottom: 20px; 
+            margin-bottom: 15px; 
         }
 
         .price-section {
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .store-list {
             margin-bottom: 15px;
-            border-radius: 6px;
+            border-radius: 8px;
             overflow: hidden;
             border: 1px solid var(--border);
         }
 
         .store-row {
-            padding: 15px 20px;
+            padding: 15px;
             background: white;
             border-bottom: 1px solid var(--border);
+        }
+
+        .store-row:last-child {
+            border-bottom: none;
         }
 
         .store-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 15px;
             color: var(--navy);
+            gap: 10px;
+        }
+
+        .store-header span:last-child {
+            white-space: nowrap;
+            color: var(--blue);
         }
 
         .store-condition {
-            font-size: 12px;
+            font-size: 11px;
             color: #777;
-            margin-top: 4px;
+            margin-top: 6px;
             font-style: italic;
-        }
-
-        .price-tag { 
-            background: var(--navy); 
-            color: white; 
-            padding: 20px 30px; 
-            border-radius: 6px; 
-            margin-top: 10px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            font-size: 18px;
+            line-height: 1.4;
         }
 
         .cta-section {
-            margin-top: 40px;
-            padding: 30px;
+            margin-top: 30px;
+            padding: 25px;
             background: #f0f7ff;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
             border: 1px dashed var(--blue);
         }
 
         .cta-text {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: var(--navy);
             font-weight: 500;
-            font-size: 16px;
+            font-size: 15px;
+            line-height: 1.6;
         }
 
         .payment-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
 
         .payment-unit {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
         }
 
         .payment-unit span {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             color: var(--navy);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .payment-unit img {
+            max-width: 100%;
+            height: auto;
         }
 
         .footer { 
             background: #f9f9f9; 
             padding: 20px; 
             text-align: center; 
-            font-size: 0.9em; 
+            font-size: 0.8em; 
             color: #777; 
             border-top: 1px solid var(--border);
         }
 
         ul {
-            margin: 10px 0 0 0;
+            margin: 0;
             padding-left: 0;
             list-style: none;
         }
 
         li {
-            margin-bottom: 12px;
-            font-size: 15px;
+            margin-bottom: 10px;
+            font-size: 14px;
             position: relative;
-            padding-left: 20px;
+            padding-left: 18px;
+            line-height: 1.4;
         }
 
         li::before {
             content: "•";
             color: var(--blue);
             font-weight: bold;
-            display: inline-block; 
-            width: 1em;
-            margin-left: -1em;
+            position: absolute;
+            left: 0;
         }
 
-        @media (max-width: 600px) {
-            .header { flex-direction: column; text-align: center; gap: 15px; }
-            .header-info { text-align: center; }
-            .payment-grid { grid-template-columns: 1fr; }
+        @media (min-width: 640px) {
+            body { padding: 20px; }
+            .proposal-card { margin: 20px auto; }
+            h1 { font-size: 22px; }
+            .content { padding: 40px; }
+            .payment-grid { grid-template-columns: 1fr 1fr; }
+            .logo-text { font-size: 28px; }
+            .header-info { font-size: 12px; }
+            .store-header { font-size: 16px; }
+            li { font-size: 15px; }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .header-info {
+                text-align: center;
+            }
+            .logo-text {
+                border-left: none;
+                border-bottom: 3px solid var(--blue);
+                padding-left: 0;
+                padding-bottom: 5px;
+            }
         }
     </style>
 </head>
@@ -230,8 +271,8 @@
             <div class="item">
                 <ul>
                     <li><strong>Gestão de Contas a Pagar:</strong> Controle e agendamento periódico de compromissos financeiros das unidades.</li>
-                    <li><strong>Conferência de Adquirentes:</strong> Acompanhamento de recebimentos dos cartões e aplicativos para conferência das taxas de contrato.</li>
-                    <li><strong>Relatórios Mensais:</strong> Elaboração e entrega de DRE (Demonstrativo do Resultado) e DFC (Demonstrativo de Fluxo de Caixa) detalhados por unidade.</li>
+                    <li><strong>Conferência de Adquirentes:</strong> Acompanhamento de recebimentos de cartões e apps para conferência das taxas de contrato.</li>
+                    <li><strong>Relatórios Mensais:</strong> Elaboração e entrega de DRE e DFC detalhados por unidade.</li>
                     <li><strong>Reunião Presencial:</strong> Encontro mensal para discussão estratégica dos indicadores financeiros.</li>
                     <li><strong>Consultoria de Performance:</strong> Foco em aumentar a lucratividade e identificar possíveis gargalos no negócio.</li>
                 </ul>
@@ -246,7 +287,7 @@
                             <span>R$ 2.050,00</span>
                         </div>
                         <div class="store-condition">
-                            * Investimento válido para faturamento mensal de até R$ 750 mil. Acima deste patamar, os valores serão renegociados para manter o equilíbrio do escopo.
+                            * Investimento válido para faturamento mensal de até R$ 750 mil. Acima deste patamar, os valores serão renegociados.
                         </div>
                     </div>
                     <div class="store-row">
@@ -258,24 +299,24 @@
                 </div>
             </div>
 
-            <!-- Seção de Chamada para Ação e Pagamento -->
             <div class="cta-section">
                 <div class="cta-text">
-                    Para dar continuidade e ter seu financeiro organizado, sem dor de cabeça com as informações na palma da mão, utilize os links abaixo para formalizar a contratação:
+                    <strong>Foque na sua operação e deixe o financeiro conosco.</strong><br>
+                    Tenha o seu financeiro organizado e as informações estratégicas sempre à sua disposição. Para darmos continuidade, seguem os links de pagamento abaixo:
                 </div>
                 
                 <div class="payment-grid">
                     <div class="payment-unit">
-                        <span>Pagar Mana Poke - Asa Sul</span>
+                        <span>Mana Poke - Asa Sul</span>
                         <a href="https://pagamento.sejaefi.com.br/botao-de-pagamento/40f490fe-fc14-45f9-b93e-acbe32761965" target="_blank">
-                            <img src="https://pagamento.sejaefi.com.br/button-solid-sm-127eea-Pagar-cash.svg">
+                            <img src="https://pagamento.sejaefi.com.br/button-solid-sm-127eea-Pagar-cash.svg" alt="Pagar Asa Sul">
                         </a>
                     </div>
                     
                     <div class="payment-unit">
-                        <span>Pagar Mana Poke - Asa Norte</span>
+                        <span>Mana Poke - Asa Norte</span>
                         <a href="https://pagamento.sejaefi.com.br/botao-de-pagamento/af6dc174-53d7-4735-86ce-a8e66a53c8ed" target="_blank">
-                            <img src="https://pagamento.sejaefi.com.br/button-solid-sm-127eea-Pagar-cash.svg">
+                            <img src="https://pagamento.sejaefi.com.br/button-solid-sm-127eea-Pagar-cash.svg" alt="Pagar Asa Norte">
                         </a>
                     </div>
                 </div>
@@ -283,7 +324,7 @@
         </div>
 
         <div class="footer">
-            <strong>Grow BPO</strong> - Gestão Financeira Inteligente para o Crescimento do seu Negócio
+            <strong>Grow BPO</strong> - Gestão Financeira Inteligente
         </div>
     </div>
 </body>
