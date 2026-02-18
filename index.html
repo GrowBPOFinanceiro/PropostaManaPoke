@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta de Terceirização Financeira - Mana Poke</title>
+    <style>
+        :root { 
+            --navy: #212752; 
+            --blue: #22ADE4; 
+            --light: #f4f7f9; 
+            --text: #333;
+            --gray-light: #fafafa;
+            --border: #eee;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: var(--light); 
+            margin: 0; 
+            padding: 20px; 
+            color: var(--text); 
+            line-height: 1.6;
+        }
+
+        .proposal-card { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            background: white; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-radius: 8px; 
+            overflow: hidden; 
+            border-top: 10px solid var(--navy); 
+        }
+
+        .header { 
+            background: white; 
+            padding: 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid var(--border); 
+        }
+
+        .logo-text { 
+            color: var(--navy); 
+            font-weight: bold; 
+            font-size: 28px; 
+            border-left: 5px solid var(--blue); 
+            padding-left: 15px; 
+            letter-spacing: -1px;
+        }
+
+        .header-info {
+            text-align: right; 
+            font-size: 12px; 
+            color: #666;
+        }
+
+        .content { 
+            padding: 40px; 
+        }
+
+        h1 { 
+            color: var(--navy); 
+            font-size: 22px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            margin-bottom: 25px; 
+            margin-top: 0;
+        }
+
+        .client-info {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        h2 { 
+            color: var(--blue); 
+            font-size: 18px; 
+            border-bottom: 2px solid var(--light); 
+            padding-bottom: 8px; 
+            margin-top: 25px; 
+            margin-bottom: 20px;
+        }
+
+        .item { 
+            background: var(--gray-light); 
+            padding: 20px; 
+            border-radius: 6px; 
+            border-left: 4px solid var(--blue); 
+            margin-bottom: 20px; 
+        }
+
+        .price-section {
+            margin-top: 30px;
+        }
+
+        .store-list {
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .store-row {
+            padding: 15px 20px;
+            background: white;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .store-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: var(--navy);
+        }
+
+        .store-condition {
+            font-size: 12px;
+            color: #777;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .price-tag { 
+            background: var(--navy); 
+            color: white; 
+            padding: 20px 30px; 
+            border-radius: 6px; 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            font-size: 18px;
+        }
+
+        .cta-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f0f7ff;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px dashed var(--blue);
+        }
+
+        .cta-text {
+            margin-bottom: 25px;
+            color: var(--navy);
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .payment-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .payment-unit span {
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--navy);
+        }
+
+        .footer { 
+            background: #f9f9f9; 
+            padding: 20px; 
+            text-align: center; 
+            font-size: 0.9em; 
+            color: #777; 
+            border-top: 1px solid var(--border);
+        }
+
+        ul {
+            margin: 10px 0 0 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--blue);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        @media (max-width: 600px) {
+            .header { flex-direction: column; text-align: center; gap: 15px; }
+            .header-info { text-align: center; }
+            .payment-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="proposal-card">
+        <div class="header">
+            <div class="logo-text">GROW BPO</div>
+            <div class="header-info">
+                <strong>Data:</strong> 18 de Fevereiro de 2026<br>
+                <strong>Consultor:</strong> Guilherme Fonseca
+            </div>
+        </div>
+        
+        <div class="content">
+            <h1>Proposta de Terceirização Financeira</h1>
+            <div class="client-info">
+                <strong>Cliente:</strong> Mana Poke
+            </div>
+
+            <h2>1. ESCOPO DOS SERVIÇOS</h2>
+            <div class="item">
+                <ul>
+                    <li><strong>Gestão de Contas a Pagar:</strong> Controle e agendamento periódico de compromissos financeiros das unidades.</li>
+                    <li><strong>Conferência de Adquirentes:</strong> Acompanhamento de recebimentos dos cartões e aplicativos para conferência das taxas de contrato.</li>
+                    <li><strong>Relatórios Mensais:</strong> Elaboração e entrega de DRE (Demonstrativo do Resultado) e DFC (Demonstrativo de Fluxo de Caixa) detalhados por unidade.</li>
+                    <li><strong>Reunião Presencial:</strong> Encontro mensal para discussão estratégica dos indicadores financeiros.</li>
+                    <li><strong>Consultoria de Performance:</strong> Foco em aumentar a lucratividade e identificar possíveis gargalos no negócio.</li>
+                </ul>
+            </div>
+
+            <div class="price-section">
+                <h2>2. INVESTIMENTO MENSAL</h2>
+                <div class="store-list">
+                    <div class="store-row">
+                        <div class="store-header">
+                            <span>Mana Poke - Asa Sul</span>
+                            <span>R$ 2.050,00</span>
+                        </div>
+                        <div class="store-condition">
+                            * Investimento válido para faturamento mensal de até R$ 750 mil. Acima deste patamar, os valores serão renegociados para manter o equilíbrio do escopo.
+                        </div>
+                    </div>
+                    <div class="store-row">
+                        <div class="store-header">
+                            <span>Mana Poke - Asa Norte</span>
+                            <span>R$ 1.400,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Chamada para Ação e Pagamento -->
+            <div class="cta-section">
+                <div class="cta-text">
+                    Para dar continuidade e ter seu financeiro organizado, sem dor de cabeça com as informações na palma da mão, utilize os links abaixo para formalizar a contratação:
+                </div>
+                
+                <div class="payment-grid">
+                    <div class="payment-unit">
+                        <span>Pagar Mana Poke - Asa Sul</span>
+                        <a href="https://pagamento.sejaefi.com.br/botao-de-pagamento/40f490fe-fc14-45f9-b93e-acbe32761965" target="_blank">
+                            <img src="https://pagamento.sejaefi.com.br/button-solid-sm-127eea-Pagar-cash.svg">
+                        </a>
+                    </div>
+                    
+                    <div class="payment-unit">
+                        <span>Pagar Mana Poke - Asa Norte</span>
+                        <a href="https://pagamento.sejaefi.com.br/botao-de-pagamento/af6dc174-53d7-4735-86ce-a8e66a53c8ed" target="_blank">
+                            <img src="https://pagamento.sejaefi.com.br/button-solid-sm-127eea-Pagar-cash.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <strong>Grow BPO</strong> - Gestão Financeira Inteligente para o Crescimento do seu Negócio
+        </div>
+    </div>
+</body>
+</html>
